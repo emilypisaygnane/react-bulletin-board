@@ -1,0 +1,78 @@
+section {
+    display: block;
+    height: 100vh;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-image: url('../../img/background.png')
+}
+
+.auth-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #41463d;
+    background-color: #fff8e8;
+    height: 75px;
+    margin: 12px;
+    padding: 20px;
+}
+
+.email-input {
+    background-color: #b26700;
+    color: #41463d;
+}
+
+.password-input {
+    background-color: #b26700;
+    color: #41463d;
+}
+
+.auth-button {
+    background-color: #b26700;
+    color: #41463d;
+
+}
+.auth-link {
+    color: #41463d;
+    font-size: 13px;
+    text-decoration: none;
+
+}
+
+
+.auth-body {
+    text-align: center;
+    background-color:#fff8e8;
+    width: 400px;
+    margin: auto;
+    align-items: center;
+
+
+}
+
+hr {
+    width: 300px;
+    background-color:#b26700;
+    height: 1.51px;
+    position: relative;
+    bottom: 40px;
+}
+
+h1 {
+    font-size: 5em;
+    font-weight: 250;
+    position: relative;
+    top: 45px;
+
+}
+
+h4 {
+    font-size: 3em;
+    font-weight: 250;
+    position: relative;
+    bottom: 80px;
+}
+
+/* #ffffff, #fff8e8, #fcd581, #41463d, #b26700 */
