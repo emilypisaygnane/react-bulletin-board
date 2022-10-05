@@ -1,0 +1,46 @@
+section.nav-wrapper {
+    display: block;
+    height: 100vh;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    background-color: #fff8e8;
+    color:#41463d;
+    align-items: center;
+    justify-content: flex-end;
+    height: 75px;
+    margin: 12px;
+    padding: 20px;
+}
+
+.header-text {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 7px;
+    text-shadow: 3px 3px 12px #41463d;
+
+}
+
+button {
+    background-color: #ffffff;
+}
+
+.title-link {
+    position:relative;
+    right: 43%;
+    font-size: 1.84em;
+    font-weight: 250;
+    text-decoration: none;
+}
+
+
+.title-link:hover {
+    cursor: pointer;
+}
