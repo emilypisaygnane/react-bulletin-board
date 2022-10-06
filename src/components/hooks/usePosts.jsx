@@ -12,3 +12,20 @@ export function usePosts() {
   }, []);
   return posts;
 }
+
+
+// import { useEffect, useState } from 'react';
+// import { getPostDetail } from '../services/posts';
+// export function usePost(id) {
+//   const [postDetail, setPostDetail] = useState({});
+//   useEffect(() => {
+//     const fetchData = async () => {
+//
+//         const data = await getPostDetail(id);
+//         setPostDetail(data);
+//      }
+//     fetchData();
+//   }, [id]);
+
+//   return { postDetail, setPostDetail };
+// }
