@@ -5,6 +5,7 @@ import Auth from './components/Auth/Auth';
 import PostDetail from './components/Posts/PostDetail';
 import EditPostDetail from './components/Posts/EditPostsDetail';
 import Home from './components/Home/Home';
+import CreatePost from './components/Posts/CreatePost';
 
 function App() {
   return (
@@ -24,13 +25,15 @@ function App() {
           <EditPostDetail />
         </Route>
 
+        <Route path="/post/create" >
+          <CreatePost />
+        </Route>
+
         <Route path="/post/:id">
           <PostDetail />
         </Route>
 
       </Switch>
-
-      <button className="create-post">Create New Post</button>
     </>
   );
 }

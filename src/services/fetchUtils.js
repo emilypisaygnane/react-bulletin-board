@@ -8,7 +8,7 @@ export async function getPosts() {
   return checkError(response);
 }
 
-export async function createPosts(email, title, description) {
+export async function createPost(email, title, description) {
   const response = await client
     .from('postmodern')
     .insert({ email, title, description });

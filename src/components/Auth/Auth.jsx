@@ -1,5 +1,3 @@
-
-
 import { useContext, useState } from 'react';
 import { Redirect, useParams, Link } from 'react-router-dom';
 import { UserContext } from '../context/UserContext';

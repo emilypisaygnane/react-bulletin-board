@@ -3,7 +3,7 @@ import PostDetail from '../Posts/PostDetail';
 import { usePosts } from '../hooks/usePosts';
 
 function Home() {
-
+  
   const posts = usePosts();
 
   return (
