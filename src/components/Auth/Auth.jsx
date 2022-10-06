@@ -16,6 +16,7 @@ export default function Auth() {
     setUser(userResponse);
     setEmail('');
     setPassword('');
+    <Redirect to="/" />;
   };
 
   if (user) {

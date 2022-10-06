@@ -1,4 +1,4 @@
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/NavBar/NavBar';
 import Auth from './components/Auth/Auth';
@@ -31,6 +31,10 @@ function App() {
 
         <Route path="/post/detail/:id">
           <PostDetail />
+        </Route>
+
+        <Route path="*">
+          <Redirect to="/auth/sign-in" />
         </Route>
 
       </Switch>
