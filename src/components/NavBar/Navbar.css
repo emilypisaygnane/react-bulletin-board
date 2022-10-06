@@ -1,3 +1,5 @@
+/*#36393b, #fec0aa, #ec4e20, #84732b, #dcf2b0*/
+
 section.nav-wrapper {
     display: block;
     height: 100vh;
@@ -10,8 +12,8 @@ section.nav-wrapper {
 header {
     display: flex;
     flex-direction: row;
-    background-color: #fff8e8;
-    color:#41463d;
+    background-color: #dcf2b0;
+    color:#36393b;
     align-items: center;
     justify-content: flex-end;
     height: 75px;
@@ -21,20 +23,23 @@ header {
 
 .header-text {
     text-decoration: none;
-    color: #ffffff;
+    color: #84732b;
     font-weight: bold;
     padding: 7px;
-    text-shadow: 3px 3px 12px #41463d;
+    text-shadow: 2px 1px 8px #36393b;
 
 }
 
 button {
-    background-color: #ffffff;
+    background-color: #dcf2b0;
+    color: #36393b;
+    font-size: medium;
+
 }
 
 .title-link {
     position:relative;
-    right: 43%;
+    right: 33%;
     font-size: 1.84em;
     font-weight: 250;
     text-decoration: none;

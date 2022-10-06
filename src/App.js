@@ -4,7 +4,7 @@ import Navbar from './components/NavBar/NavBar';
 import Auth from './components/Auth/Auth';
 import PostDetail from './components/Posts/PostDetail';
 import EditPostDetail from './components/Posts/EditPostsDetail';
-import { Home } from './components/Home';
+import Home from './components/Home/Home';
 
 function App() {
   return (
@@ -29,8 +29,8 @@ function App() {
         </Route>
 
       </Switch>
-      
-      <button className="create">Create New Post</button>
+
+      <button className="create-post">Create New Post</button>
     </>
   );
 }

@@ -1,3 +1,5 @@
+/*#36393b, #fec0aa, #ec4e20, #84732b, #dcf2b0*/
+
 section {
     display: block;
     height: 100vh;
@@ -5,74 +7,71 @@ section {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    /* background-image: url('../../img/background.png') */
+    background-image: url('../img/background.png');
 }
 
 .auth-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #41463d;
-    background-color: #fff8e8;
+    color: #36393b;
     height: 75px;
     margin: 12px;
     padding: 20px;
 }
 
 .email-input {
-    background-color: #b26700;
-    color: #41463d;
+    background-color: #dcf2b0;
+    color: #36393b;
 }
 
 .password-input {
-    background-color: #b26700;
-    color: #41463d;
+    background-color: #dcf2b0;
+    color: #36393b;
 }
 
 .auth-button {
-    background-color: #b26700;
-    color: #41463d;
-
+    background-color: #dcf2b0;
+    color: #36393b;
+    font-weight: 700;
 }
 .auth-link {
-    color: #41463d;
-    font-size: 13px;
+    color: #36393b;
+    font-size: 17px;
+    font-weight: 700;
     text-decoration: none;
-
 }
 
 
 .auth-body {
     text-align: center;
-    background-color:#fff8e8;
     width: 400px;
     margin: auto;
     align-items: center;
-
-
 }
 
 hr {
     width: 300px;
-    background-color:#b26700;
+    background-color:#ec4e20;
     height: 1.51px;
     position: relative;
     bottom: 40px;
+    left: 15px;
 }
 
 h1 {
-    font-size: 5em;
+    font-size: 5.5em;
     font-weight: 250;
     position: relative;
     top: 45px;
-
+    color: #ec4e20;
 }
 
 h4 {
-    font-size: 3em;
+    font-size: 3.5em;
     font-weight: 250;
     position: relative;
     bottom: 80px;
+    left: 30px;
+    color: #ec4e20;
 }
-
-/* #ffffff, #fff8e8, #fcd581, #41463d, #b26700 */
