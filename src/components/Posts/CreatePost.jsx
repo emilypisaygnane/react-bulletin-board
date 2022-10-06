@@ -3,14 +3,14 @@ import './CreatePost.css';
 const CreatePost = (post, setPost) => {
   return (
     <section className="create-post-wrapper">
-      <h1>CreatePost</h1>
+      <h1>What&apos;s on your mind?</h1>
       <div className="create-post-container">
-        <form action="" className="create-post-form">
+        <form className="create-post-form">
           <label htmlFor="title" className="title-input">
-            <input type="text" className="title" value={ post.title } />
+            <input name="title" type="text" className="title" value={ post.title } placeholder="title"/>
           </label>
           <label htmlFor="description" className="description-input">
-            <input type="text" className="description" value={ post.description } placeholder="description"/>
+            <input name="description" type="text" className="description" value={ post.description } placeholder="description"/>
           </label>
           <div className="create-post-button">
             <button value={ post } onClick={ (e) => { setPost(e.target.value); } }>

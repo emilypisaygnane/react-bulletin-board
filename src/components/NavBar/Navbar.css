@@ -2,7 +2,7 @@
 
 section.nav-wrapper {
     display: block;
-    height: 100vh;
+    height: 17vh;
     width: auto;
     margin: 0;
     padding: 0;
@@ -12,7 +12,10 @@ section.nav-wrapper {
 header {
     display: flex;
     flex-direction: row;
-    color:#36393b;
+    text-decoration: none;
+    color: #ec4e20;
+    font-weight: 500;
+    font-size: 17px;
     align-items: center;
     justify-content: flex-end;
     height: 75px;
@@ -21,19 +24,25 @@ header {
 }
 
 .header-text {
-    text-decoration: none;
-    color: #84732b;
-    font-weight: bold;
+   text-decoration: none;
+    color: #ec4e20;
+    font-weight: 500;
+    font-size: 17px;
     padding: 7px;
-    text-shadow: 2px 1px 8px #36393b;
+}
 
+.header-text:hover {
+  cursor: pointer;
 }
 
 button {
     background-color: #dcf2b0;
     color: #36393b;
     font-size: medium;
+}
 
+button:hover {
+   cursor: pointer;
 }
 
 .title-link {
@@ -44,7 +53,18 @@ button {
     text-decoration: none;
 }
 
-
 .title-link:hover {
+    cursor: pointer;
+}
+
+a.create-post-link {
+    text-decoration: none;
+    color: #ec4e20;
+    font-weight: 500;
+    font-size: 17px;
+    margin-right:15px;
+}
+
+a.create-post-link:hover {
     cursor: pointer;
 }
