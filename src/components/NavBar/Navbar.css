@@ -12,7 +12,6 @@ section.nav-wrapper {
 header {
     display: flex;
     flex-direction: row;
-    background-color: #dcf2b0;
     color:#36393b;
     align-items: center;
     justify-content: flex-end;
@@ -39,7 +38,7 @@ button {
 
 .title-link {
     position:relative;
-    right: 33%;
+    right: 25%;
     font-size: 1.84em;
     font-weight: 250;
     text-decoration: none;

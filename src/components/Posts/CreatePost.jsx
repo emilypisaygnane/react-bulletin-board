@@ -1,6 +1,6 @@
 import React from 'react';
-
-const CreatePost = ({ post, setPost }) => {
+import './CreatePost.css';
+const CreatePost = (post, setPost) => {
   return (
     <section className="create-post-wrapper">
       <h1>CreatePost</h1>

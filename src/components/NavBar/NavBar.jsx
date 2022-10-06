@@ -24,7 +24,7 @@ export default function Navbar() {
         { user && (
           <>
             <div className="title-link"><a className="title-link" href="/">postmodern!</a></div>
-            <NavLink to="/post/create">create post</NavLink>
+            <NavLink classNameto="/post/create">create post</NavLink>
             <p className="header-text">signed in as <span className="header-text">{ user.email }</span></p>
             <div className="signout-button">
               <button onClick={ handleSignout }>sign out</button>
