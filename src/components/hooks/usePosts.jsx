@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { getPosts } from '../../services/fetchUtils';
+import { getPosts, getPostDetail } from '../../services/fetchUtils';
 
 export function usePosts() {
   const [posts, setPosts] = useState([]);
@@ -13,19 +13,16 @@ export function usePosts() {
   return posts;
 }
 
+export function usePost(id) {
+  const [postDetail, setPostDetail] = useState({});
+  useEffect(() => {
+    const fetchData = async () => {
 
-// import { useEffect, useState } from 'react';
-// import { getPostDetail } from '../services/posts';
-// export function usePost(id) {
-//   const [postDetail, setPostDetail] = useState({});
-//   useEffect(() => {
-//     const fetchData = async () => {
-//
-//         const data = await getPostDetail(id);
-//         setPostDetail(data);
-//      }
-//     fetchData();
-//   }, [id]);
+      const data = await getPostDetail(id);
+      setPostDetail(data);
+    };
+    fetchData();
+  }, [id]);
 
-//   return { postDetail, setPostDetail };
-// }
+  return { postDetail, setPostDetail };
+}

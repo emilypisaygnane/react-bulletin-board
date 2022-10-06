@@ -4,7 +4,7 @@ import Navbar from './components/NavBar/NavBar';
 import Auth from './components/Auth/Auth';
 import PostDetail from './components/Posts/PostDetail';
 import EditPostDetail from './components/Posts/EditPostsDetail';
-import Home from './components/Home/Home';
+import Posts from './components/Posts/Posts';
 import CreatePost from './components/Posts/CreatePost';
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
       <Switch>
 
         <Route exact path="/">
-          <Home />
+          <Posts />
         </Route>
 
         <Route path="/auth/:type">
@@ -29,7 +29,7 @@ function App() {
           <CreatePost />
         </Route>
 
-        <Route path="/post/:id">
+        <Route path="/post/detail/:id">
           <PostDetail />
         </Route>
 

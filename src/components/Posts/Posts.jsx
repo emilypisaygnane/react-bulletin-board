@@ -1,20 +1,20 @@
 import React from 'react';
-import PostDetail from '../Posts/PostDetail';
+import PostCard from '../Posts/PostCard';
 import { usePosts } from '../hooks/usePosts';
 
-function Home() {
-  
+function Posts() {
+
   const posts = usePosts();
 
   return (
-    <main className="home">
+    <main className="posts">
       <h1>Bulletin Board</h1>
       { posts.map((post) => (
-        <PostDetail
+        <PostCard
           key={ post.id } { ...post } />
       )) }
     </main>
   );
 }
 
-export default Home;
+export default Posts;
