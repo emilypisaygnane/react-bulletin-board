@@ -15,14 +15,20 @@ export function usePosts() {
 
 export function usePost(id) {
   const [postDetail, setPostDetail] = useState({});
+  const [error, setError] = useState('');
+
   useEffect(() => {
     const fetchData = async () => {
+      try {
 
-      const data = await getPostDetail(id);
-      setPostDetail(data);
+        const data = await getPostDetail(id);
+        setPostDetail(data);
+      } catch (e) {
+        setError(e.message);
+      }
     };
     fetchData();
   }, [id]);
 
-  return { postDetail, setPostDetail };
+  return { postDetail, setPostDetail, error, setError };
 }

@@ -28,3 +28,8 @@ export async function updatePost(id, title, description) {
 
   return checkError(resp);
 }
+export async function deletePost(id) {
+  const resp = await client.from('postmodern').delete(id).single();
+
+  return checkError(resp);
+}

@@ -1,4 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { UserContext } from '../context/UserContext';
+
+
 
 export default function EditPostDetail({ title, description }) {
   return (

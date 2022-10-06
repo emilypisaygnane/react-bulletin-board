@@ -1,6 +1,7 @@
 /*#36393b, #fec0aa, #ec4e20, #84732b, #dcf2b0*/
 App {
-  background-color: #36393b;
+  /* background-color: #36393b; */
+  background-image: url('./components/img/background.png');
   min-height: 100vh;
   display: flex;
   flex-direction: column;
