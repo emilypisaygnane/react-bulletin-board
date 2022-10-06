@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Redirect } from 'react-router-dom';
 import { signOut } from '../../services/auth';
-import { UserContext } from '../../context/UserContext';
+import { UserContext } from '../context/UserContext';
 
 import './Navbar.css';
 
