@@ -1,8 +1,7 @@
-import React from 'react';
-import { Redirect, useParams, Link } from 'react-router-dom';
 import { useContext, useState } from 'react';
+import { Redirect, useParams, Link } from 'react-router-dom';
+import { UserContext } from '../context/UserContext';
 import { authUser } from '../../services/auth';
-import { UserContext } from '../../context/UserContext';
 import './Auth.css';
 
 export default function Auth() {
@@ -24,19 +23,23 @@ export default function Auth() {
   }
 
   return (
-    <section className="auth-container">
-
+    <section>
       <div className="auth-header">
-        <div className="email-wrapper">
-          <input className="email-input" type="text" value={ email } onChange={ (e) => setEmail(e.target.value) } placeholder="email" />
+        <div>
+          <input className="form email-input" type="text" value={ email } onChange={(e) => setEmail(e.target.value)} placeholder="email" />
         </div>
-        <div className="password-wrapper">
-          <input className="password-input" type="password" value={ password } onChange={ (e) => setPassword(e.target.value) } placeholder="password" /></div>
-        <div className="auth-button-wrapper"><button className="auth-button" onClick={ authenticateUser }>{ type }</button></div>
-        {type === 'sign-in' ?
-          <Link className='auth-link' to='/auth/sign-up'>sign-up</Link> :
-          <Link className='auth-link' to='/auth/sign-in'>sign-in</Link>
+        <div>
+          <input className="form password-input" type="password" value={ password } onChange={(e) => setPassword(e.target.value)} placeholder="password" />
+        </div>
+
+        <button className="form auth-button" onClick={ authenticateUser }>{ type }</button>
+
+        {
+          type === 'sign-in' ?
+            <Link className='auth-link' to='/auth/sign-up'>sign-up</Link> :
+            <Link className='auth-link' to='/auth/sign-in'>sign-in</Link>
         }
+
       </div>
 
       <div className="auth-body">
