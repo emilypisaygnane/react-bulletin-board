@@ -1,8 +1,8 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { useHistory, useParams, Redirect } from 'react-router-dom';
 import { updatePost } from '../../services/fetchUtils';
 import { usePost } from '../hooks/usePosts';
-import { useUser } from '../context/UserContext';
+import { UserContext, useUser } from '../context/UserContext';
 
 export default function EditPostDetail() {
   const { id } = useParams();
@@ -11,8 +11,11 @@ export default function EditPostDetail() {
   const [descriptionInput, setDescriptionInput] = useState('');
   const history = useHistory();
 
-  const { userM } = useUser();
-  if (!userM) {
+  const { user } = useContext(UserContext);
+ 
+  
+
+  if (!user) {
     return <Redirect to="/auth" />;
   }
   
