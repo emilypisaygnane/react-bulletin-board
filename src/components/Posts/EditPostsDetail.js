@@ -2,7 +2,7 @@
 // import { UserContext } from '../context/UserContext';
 
 import { useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Redirect, useHistory, useParams } from 'react-router-dom';
 import { updatePost } from '../../services/fetchUtils';
 import { usePost, useUpdatePost } from '../hooks/usePosts';
 
@@ -16,9 +16,13 @@ export default function EditPostDetail() {
   const [descriptionInput, setDescriptionInput] = useState('');
   // const temp = useUpdatePost({ id, titleInput, descriptionInput });
   // console.log(temp);
+  const history = useHistory();
 
   const handleSubmit = async () => {
     await updatePost(id, titleInput, descriptionInput);
+    setTitleInput('');
+    setDescriptionInput('');
+    history.push(`/post/detail/${id}`);
   };
 
   return (
