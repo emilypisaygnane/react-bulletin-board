@@ -8,6 +8,7 @@ section.nav-wrapper {
     padding: 0;
     overflow: hidden;
     background-color: #fec0aa;
+    margin: 10px;
 }
 
 header {
