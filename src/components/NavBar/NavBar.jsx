@@ -2,9 +2,6 @@ import React, { useContext } from 'react';
 import { NavLink, Redirect } from 'react-router-dom';
 import { signOut } from '../../services/auth';
 import { UserContext } from '../context/UserContext';
-// import CreatePost from '../Navbar/Navbar';
-// conditional NavLink for routing auth user to create post page has been added to header navigation below
-
 import './Navbar.css';
 
 export default function Navbar() {

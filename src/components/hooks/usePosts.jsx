@@ -16,7 +16,6 @@ export function usePosts() {
 export function usePost(id) {
   const [postDetail, setPostDetail] = useState({});
   const [error, setError] = useState('');
-  // console.log('Id: ', id);
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -29,7 +28,6 @@ export function usePost(id) {
     };
     fetchData();
   }, [id]);
-  // console.log('postDetail: ', postDetail);
   return { postDetail, setPostDetail, error, setError };
 }
 

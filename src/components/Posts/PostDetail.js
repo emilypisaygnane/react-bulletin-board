@@ -1,16 +1,13 @@
-// import React, { useContext } from 'react';
-// import { getPostDetail } from '../../services/fetchUtils';
 import { Redirect, Link, useParams } from 'react-router-dom';
 import { useUser } from '../context/UserContext';
 import { usePost } from '../hooks/usePosts';
-
 
 export default function PostDetail() {
   const { user } = useUser();
   const { id } = useParams();
   
   const { postDetail, error } = usePost(id);
-  
+
   if (!user) {
     return <Redirect to="/auth" />;
   }
@@ -32,15 +29,3 @@ export default function PostDetail() {
     </>
   );
 }
-
-  // if (user === user.id) {
-  //   return (
-  //     <>
-  //       <div>
-  //         <h2>{title}</h2>
-  //         <p>{description}</p>
-  //         <button className="edit-post">Edit This Post</button>
-  //       </div>
-  //     </>
-  //   );
-  // }

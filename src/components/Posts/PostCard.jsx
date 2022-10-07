@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-
-
 function PostCard({ id, email, title, description }) {
   return (
     <section className="post-card-wrapper">
