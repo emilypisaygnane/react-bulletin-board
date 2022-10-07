@@ -15,10 +15,10 @@ export async function getPostDetail(id) {
 }
 
 // should we have email included in this create post function?
-export async function createPost(title, description) {
+export async function createPost(uuid, email, title, description) {
   const response = await client
     .from('postmodern')
-    .insert({ title, description });
+    .insert({ uuid, email, title, description });
 
   return checkError(response);
 }
