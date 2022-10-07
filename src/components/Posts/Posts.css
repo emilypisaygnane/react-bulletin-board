@@ -1,19 +1,16 @@
-h1 {
+.title {
     background-color: white;
     box-shadow: 2px 2px 3px 0px lightslategrey;
     -webkit-box-shadow: 2px 2px 4px 0px lightslategrey;
-    text-align: center;
-    position: relative;
     font-size: 35px;
-}
-
-.post-card-wrapper {
-    background-color: white;
-    height: fit-content;
-    margin: 10px;
+    height: 100px;
+    margin: 30px;
     padding: 15px;
-    width: 300px;
-    box-shadow: 2px 2px 3px 0px lightslategrey;
-    -webkit-box-shadow: 2px 2px 4px 0px lightslategrey;
-
+    border-radius: 15px;
+    color: #a73971;
+}
+.posts-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }

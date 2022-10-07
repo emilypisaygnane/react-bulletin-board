@@ -16,11 +16,13 @@ function Posts() {
 
   return (
     <main className="posts">
-      <h1>Bulletin Board</h1>
-      { posts.map((post) => (
-        <PostCard
-          key={ post.id } { ...post } />
-      )) }
+      <h1 className="title">Bulletin Board</h1>
+      <div className="posts-container">
+        { posts.map((post) => (
+          <PostCard
+            key={ post.id } { ...post } />
+        )) }
+      </div>
     </main>
   );
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Posts.css';
+import './PostCard.css';
 
 function PostCard({ id, email, title, description }) {
   return (
