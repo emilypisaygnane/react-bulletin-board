@@ -3,6 +3,7 @@ import PostCard from '../Posts/PostCard';
 import { usePosts } from '../hooks/usePosts';
 import { Redirect } from 'react-router-dom';
 import { UserContext } from '../context/UserContext';
+import './Posts.css';
 
 function Posts() {
   const { user } = useContext(UserContext);
