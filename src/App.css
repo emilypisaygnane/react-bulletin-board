@@ -1,5 +1,6 @@
 /*#36393b, #fec0aa, #ec4e20, #84732b, #dcf2b0*/
 App {
+  background-image: url('./components/img/background.png');
   background-color: #36393b;
   height: 100vh;
   display: flex;

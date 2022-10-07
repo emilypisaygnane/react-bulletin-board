@@ -7,6 +7,8 @@ section.nav-wrapper {
     margin: 0;
     padding: 0;
     overflow: hidden;
+    background-color: #fec0aa;
+    margin: 10px;
 }
 
 header {
@@ -47,7 +49,7 @@ button:hover {
 
 .title-link {
     position:relative;
-    right: 25%;
+    right: 40%;
     font-size: 1.84em;
     font-weight: 250;
     text-decoration: none;

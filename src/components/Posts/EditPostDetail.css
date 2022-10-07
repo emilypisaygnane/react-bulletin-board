@@ -1,0 +1,60 @@
+.edit-post-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: .35em;
+  position: relative;
+  bottom: 350px;
+  text-align: center;
+  left: 200px;
+}
+
+.edit-post-title {
+  font-size: 20px;
+  padding: 40px;
+  text-align: center;
+}
+
+.title-display {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  text-align:center;
+  color: #ec4e20;
+
+}
+
+.description-display {
+  font-size: 20px;
+  font-weight: 500;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  text-align:center;
+  color: #ec4e20;
+}
+input {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  text-align:center;
+  position: relative;
+  left: 450px;
+}
+/*#36393b, #fec0aa, #ec4e20, #84732b, #dcf2b0*/
+
+.edit-post-button {
+  justify-items: center;
+  position: relative;
+  left: 385px;
+  top: 75px;
+}
+
+.delete-post-button {
+  justify-items: center;
+  position: relative;
+  left: 385px;
+  top: 75px;
+  margin: 20px;
+}

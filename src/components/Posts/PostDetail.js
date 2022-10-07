@@ -1,30 +1,31 @@
-import React from 'react';
-// import { Redirect } from 'react-router-dom';
-// import { UserContext } from '../context/UserContext';
+import { Redirect, Link, useParams } from 'react-router-dom';
+import { useUser } from '../context/UserContext';
+import { usePost } from '../hooks/usePosts';
 
-export default function PostDetail(post) {
+export default function PostDetail() {
+  const { user } = useUser();
+  const { id } = useParams();
+  
+  const { postDetail, error } = usePost(id);
+
+  if (!user) {
+    return <Redirect to="/auth" />;
+  }
+  const owner = user.id === postDetail.uuid;
+  if (error) return <h1>{error}</h1>;
+
   return (
     <>
       <div>
-        <h2>{ post.title }</h2>
-        <p>{ post.description }</p>
+        <h2>{ postDetail.title }</h2>
+        <p>{ postDetail.description }</p>
+        <p>{ postDetail.email }</p>
+        {owner && (
+          <p>
+            <Link to={`/post/edit/${id}`}>Edit</Link>
+          </p>
+        )}
       </div>
     </>
   );
 }
-  // const { user } = useContext(UserContext);
-  // if (!user) {
-  //   return <Redirect to="/auth" />;
-  // }
-
-  // if (user === user.id) {
-  //   return (
-  //     <>
-  //       <div>
-  //         <h2>{title}</h2>
-  //         <p>{description}</p>
-  //         <button className="edit-post">Edit This Post</button>
-  //       </div>
-  //     </>
-  //   );
-  // }
