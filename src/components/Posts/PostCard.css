@@ -1,0 +1,17 @@
+.post-card-wrapper {
+    background-color: #8ba2e6;
+    height: 150px;
+    margin: 10px;
+    padding: 20px 15px 15px 20px;
+    width: 180px;
+    box-shadow: 2px 2px 3px 0px lightslategrey;
+    -webkit-box-shadow: 2px 2px 4px 0px lightslategrey;
+    border-radius: 15px;
+
+}
+
+.post-card-wrapper * {
+    text-decoration: none;
+    color: white;
+    font-weight: 250em;
+}
