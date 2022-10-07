@@ -1,6 +1,5 @@
 import React, { useState, useContext } from 'react';
 import { Redirect, useHistory } from 'react-router-dom';
-import { useUser } from '../context/UserContext';
 import { createPost } from '../../services/fetchUtils';
 import './CreatePost.css';
 import { UserContext } from '../context/UserContext';
