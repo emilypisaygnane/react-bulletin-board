@@ -5,7 +5,7 @@ import { useUser } from '../context/UserContext';
 import { usePost } from '../hooks/usePosts';
 
 
-export default function PostDetail({ user_id }) {
+export default function PostDetail() {
   const { user } = useUser();
   const { id } = useParams();
   
@@ -14,7 +14,7 @@ export default function PostDetail({ user_id }) {
   if (!user) {
     return <Redirect to="/auth" />;
   }
-  const owner = user.id === user_id;
+  const owner = user.id === postDetail.uuid;
   if (error) return <h1>{error}</h1>;
 
   return (
@@ -25,7 +25,7 @@ export default function PostDetail({ user_id }) {
         <p>{ postDetail.email }</p>
         {owner && (
           <p>
-            <Link to={`/post/edit/:${id}`}>Edit</Link>
+            <Link to={`/post/edit/${id}`}>Edit</Link>
           </p>
         )}
       </div>

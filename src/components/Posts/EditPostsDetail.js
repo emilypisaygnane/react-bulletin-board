@@ -1,15 +1,34 @@
 // import React, { useContext } from 'react';
 // import { UserContext } from '../context/UserContext';
 
+import { useState } from 'react';
+import { useParams } from 'react-router-dom';
+import { updatePost } from '../../services/fetchUtils';
+import { usePost, useUpdatePost } from '../hooks/usePosts';
 
 
-export default function EditPostDetail({ title, description }) {
+
+export default function EditPostDetail() {
+  const { id } = useParams();
+  const { postDetail } = usePost(id);
+  // console.log(postDetail.title);
+  const [titleInput, setTitleInput] = useState('');
+  const [descriptionInput, setDescriptionInput] = useState('');
+  // const temp = useUpdatePost({ id, titleInput, descriptionInput });
+  // console.log(temp);
+
+  const handleSubmit = async () => {
+    await updatePost(id, titleInput, descriptionInput);
+  };
+
   return (
     <>
       <div>
-        <h2>{title}</h2>
-        <p>{description}</p>
-        <button className="edit-post">Save This Post</button>
+        <h2>{postDetail.title}</h2>
+        <input type="text" value={titleInput} onChange={(e) => setTitleInput(e.target.value)} />
+        <p>{postDetail.description}</p>
+        <input type="text" value={descriptionInput} onChange={(e) => setDescriptionInput(e.target.value)}/>
+        <button className="edit-post" onClick={() => handleSubmit({ id, titleInput, descriptionInput })}>Save This Post</button>
         <button className="delete-post">Delete This Post</button>
       </div>
     </>
