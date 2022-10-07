@@ -3,13 +3,12 @@ import PostCard from '../Posts/PostCard';
 import { usePosts } from '../hooks/usePosts';
 
 function Posts() {
-
   const posts = usePosts();
-
   return (
     <main className="posts">
       <h1>Bulletin Board</h1>
       { posts.map((post) => (
+        // console.log('Post: ', post.id),
         <PostCard
           key={ post.id } { ...post } />
       )) }

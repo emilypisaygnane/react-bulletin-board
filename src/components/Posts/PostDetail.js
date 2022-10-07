@@ -1,25 +1,28 @@
-import React, { useContext } from 'react';
+// import React, { useContext } from 'react';
 // import { getPostDetail } from '../../services/fetchUtils';
-import { Redirect, Link } from 'react-router-dom';
+import { Redirect, Link, useParams } from 'react-router-dom';
 import { useUser } from '../context/UserContext';
 import { usePost } from '../hooks/usePosts';
 
 
-export default function PostDetail({ id, user_id, email }) {
+export default function PostDetail({ user_id }) {
   const { user } = useUser();
-  const owner = user.id === user_id;
-  const { title, description, error, setError } = usePost(id);
+  const { id } = useParams();
+  
+  const { postDetail, error } = usePost(id);
+  
   if (!user) {
     return <Redirect to="/auth" />;
   }
+  const owner = user.id === user_id;
   if (error) return <h1>{error}</h1>;
 
   return (
     <>
       <div>
-        <h2>{ title }</h2>
-        <p>{ description }</p>
-        <p>{ email }</p>
+        <h2>{ postDetail.title }</h2>
+        <p>{ postDetail.description }</p>
+        <p>{ postDetail.email }</p>
         {owner && (
           <p>
             <Link to={`/post/edit/:${id}`}>Edit</Link>

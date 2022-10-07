@@ -9,8 +9,8 @@ export async function getPosts() {
 }
 
 export async function getPostDetail(id) {
+  // console.log('resp: ', id);
   const resp = await client.from('postmodern').select('*').match({ id }).single();
-
   return checkError(resp);
 }
 
