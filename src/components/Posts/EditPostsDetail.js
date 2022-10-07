@@ -1,8 +1,9 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { useHistory, useParams, Redirect } from 'react-router-dom';
 import { updatePost } from '../../services/fetchUtils';
 import { usePost } from '../hooks/usePosts';
-import { useUser } from '../context/UserContext';
+import { UserContext } from '../context/UserContext';
+import './EditPostDetail.css';
 
 export default function EditPostDetail() {
   const { id } = useParams();
@@ -11,11 +12,14 @@ export default function EditPostDetail() {
   const [descriptionInput, setDescriptionInput] = useState('');
   const history = useHistory();
 
-  const { userM } = useUser();
-  if (!userM) {
+  const { user } = useContext(UserContext);
+
+
+
+  if (!user) {
     return <Redirect to="/auth" />;
   }
-  
+
   const handleSubmit = async () => {
     await updatePost(id, titleInput, descriptionInput);
     setTitleInput('');
@@ -25,13 +29,14 @@ export default function EditPostDetail() {
 
   return (
     <>
-      <div>
-        <h2>{postDetail.title}</h2>
-        <input type="text" value={titleInput} onChange={(e) => setTitleInput(e.target.value)} />
-        <p>{postDetail.description}</p>
-        <input type="text" value={descriptionInput} onChange={(e) => setDescriptionInput(e.target.value)}/>
-        <button className="edit-post" onClick={() => handleSubmit({ id, titleInput, descriptionInput })}>Save This Post</button>
-        <button className="delete-post">Delete This Post</button>
+      <div className="edit-post=wrapper">
+        <h1 className="edit-post-title">Edit Post</h1>
+        <h2 className="title-display">{postDetail.title}</h2>
+        <input className="edit-title-input" type="text" value={titleInput} onChange={(e) => setTitleInput(e.target.value)} />
+        <p className="description-display">{postDetail.description}</p>
+        <input className="edit-description-display" type="text" value={descriptionInput} onChange={(e) => setDescriptionInput(e.target.value)}/>
+        <button className="edit-post-button" onClick={() => handleSubmit({ id, titleInput, descriptionInput })}>Save This Post</button>
+        <button className="delete-post-button">Delete This Post</button>
       </div>
     </>
   );
