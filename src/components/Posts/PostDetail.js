@@ -2,12 +2,12 @@ import React from 'react';
 // import { Redirect } from 'react-router-dom';
 // import { UserContext } from '../context/UserContext';
 
-export default function PostDetail({ title, description }) {
+export default function PostDetail(post) {
   return (
     <>
       <div>
-        <h2>{ title }</h2>
-        <p>{ description }</p>
+        <h2>{ post.title }</h2>
+        <p>{ post.description }</p>
       </div>
     </>
   );

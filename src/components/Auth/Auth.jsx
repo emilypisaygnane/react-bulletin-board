@@ -21,7 +21,7 @@ export default function Auth() {
   if (user) {
     return <Redirect to="/" />;
   }
-
+  
   return (
     <section>
       <div className="auth-header">
