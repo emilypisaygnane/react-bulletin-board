@@ -1,6 +1,6 @@
 import { useContext, useState } from 'react';
 import { useHistory, useParams, Redirect } from 'react-router-dom';
-import { updatePost } from '../../services/fetchUtils';
+import { deletePost, updatePost } from '../../services/fetchUtils';
 import { usePost } from '../hooks/usePosts';
 import { UserContext } from '../context/UserContext';
 import './EditPostDetail.css';
@@ -26,6 +26,11 @@ export default function EditPostDetail() {
     history.push(`/post/detail/${id}`);
   };
 
+  const handleDelete = async () => {
+    await deletePost(id);
+    history.push('/');
+  };
+  
   return (
     <>
       <div className="edit-post=wrapper">
@@ -35,7 +40,7 @@ export default function EditPostDetail() {
         <p className="description-display">{postDetail.description}</p>
         <input className="edit-description-display" type="text" value={descriptionInput} onChange={(e) => setDescriptionInput(e.target.value)}/>
         <button className="edit-post-button" onClick={() => handleSubmit({ id, titleInput, descriptionInput })}>Save This Post</button>
-        <button className="delete-post-button">Delete This Post</button>
+        <button className="delete-post-button" onClick={() => handleDelete({ id })}>Delete This Post</button>
       </div>
     </>
   );
