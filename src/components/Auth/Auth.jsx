@@ -10,7 +10,7 @@ export default function Auth() {
   const [password, setPassword] = useState('');
 
   const { user, setUser } = useContext(UserContext);
-
+  
   const authenticateUser = async () => {
     const userResponse = await authUser(email, password, type);
     setUser(userResponse);

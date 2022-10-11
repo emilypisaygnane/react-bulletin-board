@@ -15,7 +15,6 @@ export default function EditPostDetail() {
   const { user } = useContext(UserContext);
 
 
-
   if (!user) {
     return <Redirect to="/auth" />;
   }

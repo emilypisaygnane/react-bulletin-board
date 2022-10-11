@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import './PostCard.css';
 
 function PostCard({ id, email, title, description }) {
+  
   return (
     <section className="post-card-wrapper">
       <Link to={ `/post/detail/${id}` }>

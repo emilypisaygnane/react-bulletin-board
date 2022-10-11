@@ -10,7 +10,11 @@ export async function getPosts() {
 
 export async function getPostDetail(id) {
   // console.log('resp: ', id);
-  const resp = await client.from('postmodern').select('*').match({ id }).single();
+  const resp = await client
+    .from('postmodern')
+    .select('*')
+    .match({ id })
+    .single();
   return checkError(resp);
 }
 
@@ -24,12 +28,19 @@ export async function createPost(uuid, email, title, description) {
 }
 
 export async function updatePost(id, title, description) {
-  const resp = await client.from('postmodern').update({ title, description }).match({ id });
+  const resp = await client
+    .from('postmodern')
+    .update({ title, description })
+    .match({ id });
 
   return checkError(resp);
 }
 export async function deletePost(id) {
-  const resp = await client.from('postmodern').delete(id).single();
+  const resp = await client
+    .from('postmodern')
+    .delete({ id })
+    .match({ id })
+    .single();
 
   return checkError(resp);
 }

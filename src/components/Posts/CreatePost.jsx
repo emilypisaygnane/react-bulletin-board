@@ -10,7 +10,6 @@ const CreatePost = () => {
   const history = useHistory();
   const { user } = useContext(UserContext);
   
-  
   if (!user) {
     return <Redirect to="/auth" />;
   }
@@ -19,7 +18,6 @@ const CreatePost = () => {
     await createPost(user.id, user.email, title, description);
     history.push('/');
   }
-
 
   return (
     <section className="create-post-wrapper">
