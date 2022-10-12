@@ -27,10 +27,10 @@ export default function Auth() {
     <section>
       <div className="auth-header">
         <div>
-          <input className="form email-input" type="text" value={ email } onChange={(e) => setEmail(e.target.value)} placeholder="email" />
+          <input aria-label='Email' className="form email-input" type="text" value={ email } onChange={(e) => setEmail(e.target.value)} placeholder="email" />
         </div>
         <div>
-          <input className="form password-input" type="password" value={ password } onChange={(e) => setPassword(e.target.value)} placeholder="password" />
+          <input aria-label='Password' className="form password-input" type="password" value={ password } onChange={(e) => setPassword(e.target.value)} placeholder="password" />
         </div>
 
         <button className="form auth-button" onClick={ authenticateUser }>{ type }</button>
