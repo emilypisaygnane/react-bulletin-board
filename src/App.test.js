@@ -1,4 +1,4 @@
-import { findAllByDisplayValue, findAllByText, findByPlaceholderText, findByText, fireEvent, render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import App from './App';
 import { MemoryRouter } from 'react-router-dom';
 import { UserProvider } from './components/context/UserContext';
